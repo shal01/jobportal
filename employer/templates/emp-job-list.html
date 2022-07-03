@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            {%for job in jobs%}
+                <div class="border border-dark mb-2 mt-2">
+                    jobtitle:{{jobs.job_title}}
+                    exp:{{jobs.experience}}
+                    created_date:{{jobs.created_date}}
+                    <a href="{%url 'emp-jobdetial' job.id %}">Detail</a>
+                    <a href="{%url 'job-edit' job.id %">Update</a>
+                    <a href="{}">View Applications</a>
+                </div>
+            {%endfor%}
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+</body>
+</html>

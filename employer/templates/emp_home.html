@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>welcome Employer   {{request.user}}</h1>
+<a href="">Add_Profile request.user.is_candidate</a>
+{%if request.user.employers%}
+    <a href="{%url 'emp-datails' %}">View_Profile</a>
+{%else%}
+    <a href="{%url 'emp-profile' %}">Add_Profile</a>
+{%endif%}
+<a href="{%url 'addjob'%}">PostJob</a>
+<a href="{%url 'all-jobs'%}">Posted_Jobs</a>
+</body>
+</html>
